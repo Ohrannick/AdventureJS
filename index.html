@@ -9,13 +9,22 @@
 
 <body>
   <header>
-    <img class="btn-img" src="img/shopping_cart.png" height="100%" alt="Корзина">
-    <button class="btn-cart" img src="img/shopping_cart.png" alt="Корзина" type="button">Корзина</button>
+    <div class="logo">E-shop</div>
+    <div class ='basket'>
+      <img class="btn-img" src="img/shopping_cart.png" height="100%" alt="Корзина">
+      <button class="btn-cart" img src="img/shopping_cart.png" alt="Корзина" type="button">Корзина</button>
+    </div>
   </header>
   <main>
     <div class="products"></div>
   </main>
-  <span class="goodsSum"></span>
+  <span class="goodsSum">
+    <button id="calcSum" type="button">Подсчитать сумму</button>
+  </span>
+  <br>
+  <main>
+    <div class="baskets"></div>
+  </main>
   <script src="main.js"></script>
 </body>
 

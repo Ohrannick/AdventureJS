@@ -16,8 +16,20 @@ header {
   padding-right: 113px;
   padding-bottom: 20px;
   display: flex;
+  justify-content: space-between;
+}
+
+.logo{
+    text-transform: uppercase;
+    font-weight: bold;
+    align-self: center;
+    cursor: pointer;
+}
+.basket {
+  display: flex;
   justify-content: flex-end;
 }
+
 
 .btn-img {
   cursor: pointer;
@@ -89,4 +101,19 @@ header {
   font-size: 20px;
   text-align: center;
   font-weight: bold;
+}
+
+#calcSum{
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.basket-item {
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
 }
