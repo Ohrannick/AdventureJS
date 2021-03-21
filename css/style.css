@@ -12,10 +12,14 @@ button:focus{
     outline: none;
 }
 .logo{
-
     text-transform: uppercase;
     font-weight: bold;
 }
+
+.fas{
+    cursor: pointer;
+}
+
 .btn-cart{
     background-color: #fafafa;
     padding: 10px 20px;
@@ -33,19 +37,19 @@ button:focus{
 .btn-cart, .logo{
     align-self: center;
 }
-/*.products {*/
-/*display: flex;*/
-/*justify-content: space-between;*/
-/*flex-wrap: wrap;*/
-/*padding: 40px 80px;*/
-/*}*/
+/* .products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 80px;
+} */
 .products{
     column-gap: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
     grid-template-rows: 1fr;
     padding: 40px 80px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 p {
     margin: 0 0 5px 0;
@@ -81,7 +85,6 @@ img {
     color: black;
     width: 300px;
 }
-
 .invisible{
     display: none;
 }
@@ -96,7 +99,9 @@ img {
     border-right: 10px solid transparent;
     border-bottom: 10px solid white;
 }
-
+.all{
+  text-align: right;
+}
 .buy-btn, .del-btn{
     margin-top: 5px;
     background-color: #2f2a2d;

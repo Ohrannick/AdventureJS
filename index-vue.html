@@ -11,19 +11,20 @@
     <header>
         <div class="logo">E-shop</div>
         <div class="cart">
-            <form action="#" class="search-form">
+            <form action="#" class="search-form" @submit.prevent = 'filter'>
                 <input 
                     type="text" 
                     class="search-field" 
                     v-model="searchLine" 
                 >
                 <button class="btn-search" type="submit">
-                    <i class="fas fa-search" @click="searchLine=''">x</i>
+                    <i class="fas fa-search">&#128269;</i>
                 </button>
             </form>
             <button class="btn-cart" type="button" @click="visibleCart">Корзина</button>
-            <div class="cart-block" :class='isVisibleCart' >
-                <div class="cart-item" data-id="good.id_product" v-if="goods.length !== 0" v-for="(good, index) in goods" :key="good.id_product">
+            <div class="cart-block" :class='isVisibleCart'>
+              <span v-if="!goods.length">Корзина пуста</span>
+                <div class="cart-item" v-for="(good, index) in goods">
                   <div class="product-bio">
                     <img :src="imgGoods" alt="Some image">
                     <div class="product-desc">
@@ -34,18 +35,18 @@
                   </div>
                   <div class="right-block">
                     <p class="product-price">$ {{ good.quantity * good.price }}</p>
-                    <button class="del-btn" data-id="good.id_product" @click='removeGoods(index)'>&times;</button>
+                    <button class="del-btn" @click='removeGoods(good)'>&times;</button>
                   </div>
                 </div>
-              <span v-else="goods.length === 0">Корзина пуста</span>
+               <hr>
+               <div class='all' v-if="goods.length">Итого в корзине: $ {{ calcSum }}</div>
             </div>
-
           </div>
     </header>
     <main>
         <div class="products">
-            <div class="product-item" v-for="product of products" :key="product.id_product" >
-                <div :class="filter(product.product_name) ? '' : 'invisible'" class="desc">
+            <div class="product-item" v-for="product of filtered">
+                <div class="desc">
                     <img :src="imgCatalog" alt="Some img">
                     <h3>{{product.product_name}}</h3>
                     <p>{{product.price}} $</p>
@@ -59,18 +60,3 @@
     <script src="js/main.js"></script>
 </body>
 </html>
-
-<!-- <div class="cart-item" data-id="${this.id_product}">-->
-    <!--<div class="product-bio">-->
-        <!--<img src="${this.img}" alt="Some image">-->
-        <!--<div class="product-desc">-->
-            <!--<p class="product-title">${this.product_name}</p>-->
-            <!--<p class="product-quantity">Quantity: ${this.quantity}</p>-->
-            <!--<p class="product-single-price">$${this.price} each</p>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="right-block">-->
-        <!--<p class="product-price">${this.quantity*this.price}</p>-->
-        <!--<button class="del-btn" data-id="${this.id_product}">&times;</button>-->
-    <!--</div>-->
-<!--</div> -->
