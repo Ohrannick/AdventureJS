@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
   <title>Интернет-магазин</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body>
-  <header>
-    <div class="logo">E-shop</div>
-    <div class ='basket'>
-      <img class="btn-img" src="img/shopping_cart.png" height="100%" alt="Корзина">
-      <button class="btn-cart" img src="img/shopping_cart.png" alt="Корзина" type="button">Корзина</button>
+  <body>
+    <div id="app">
+      <header>
+        <div class="logo">E-shop</div>
+        <div class="cart">
+          <search></search>
+          <cart ref='cart'></cart>
+        </div>
+      </header>
+        <main>
+          <products ref="products"></products>
+        </main>
     </div>
-  </header>
-  <main>
-    <div class="products"></div>
-  </main>
-  <span class="goodsSum">
-    <button id="calcSum" type="button">Подсчитать сумму</button>
-  </span>
-  <br>
-  <main>
-    <div class="baskets"></div>
-  </main>
-  <script src="main.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="js/cart-comp.js"></script>
+    <script src="js/prod-comp.js"></script>
+    <script src="js/filt-comp.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

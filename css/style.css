@@ -73,6 +73,7 @@ img {
 }
 .cart {
   position: relative;
+  display: flex;
 }
 .cart-block {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.62);
@@ -85,9 +86,6 @@ img {
   padding: 20px;
   color: black;
   width: 300px;
-}
-.invisible {
-  display: none;
 }
 .cart-block:before {
   content: "";
