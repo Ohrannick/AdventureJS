@@ -1,0 +1,18 @@
+{
+  "contents": [
+    {
+      "quantity": 1,
+      "id_product": 459,
+      "product_name": "Accessories",
+      "price": 100,
+      "img": "img/Accessories.jpeg"
+    },
+    {
+      "quantity": 1,
+      "id_product": 458,
+      "product_name": "Monoblock",
+      "price": 5200,
+      "img": "img/Monoblock.jpeg"
+    }
+  ]
+}

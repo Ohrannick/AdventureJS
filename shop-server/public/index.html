@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Интернет-магазин</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="logo">My-shop</div>
+        <div class="cart">
+          <search></search>
+          <cart ref='cart'></cart>
+        </div>
+      </header>
+        <main>
+          <products ref="products"></products>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="js/cart-comp.js"></script>
+    <script src="js/prod-comp.js"></script>
+    <script src="js/filt-comp.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
