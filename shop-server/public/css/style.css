@@ -52,21 +52,24 @@ button:focus {
   padding: 40px 80px;
   /* justify-content: space-between; */
 }
+.desc:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.62);
+}
 p {
   margin: 0 0 5px 0;
 }
 .product-item {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 300px;
   border-radius: 5px;
   overflow: hidden;
   margin: 20px 0;
 }
-img {
+/* img {
   max-width: 100%;
   height: auto;
-}
+} */
 .desc {
   border: 1px solid #c0c0c040;
   padding: 15px;
@@ -121,6 +124,9 @@ img {
 .cart-item {
   display: flex;
   justify-content: space-between;
+}
+.cart-item:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.62);
 }
 .cart-item:not(:last-child) {
   margin-bottom: 20px;
