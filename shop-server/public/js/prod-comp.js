@@ -26,7 +26,6 @@ const products = {
     .then(data => {
       for(let el of data){
         el.img = `img/${el.product_name}.jpeg`;
-        console.log(el.img);
         this.products.push(el);
         this.filtered.push(el);
         }

@@ -1,5 +1,5 @@
-const moment = require('moment');
-const fs = require('fs');
+const moment = require('moment'); //импортировали модуль moment - для работы со временем
+const fs = require('fs');         //импортировали модуль fs - для работы с файлами
 
 const logger = (name, action) => {
   fs.readFile('server/db/stats.json', 'utf-8', (err, data) => {
@@ -7,7 +7,7 @@ const logger = (name, action) => {
       console.log('Can`t read file')
     } else {
       const stat = JSON.parse(data);
-      stat.push({
+      stat.push({ //записываем время события, продукт и само событие в корзине
         time: moment().format('DD MMM YYYY, h:mm:ss a'),
         prod_name: name,
         action: action

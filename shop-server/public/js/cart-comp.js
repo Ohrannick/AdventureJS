@@ -75,7 +75,6 @@ const cart = {
       .then(data => {
         for (let el of data.contents) {
           el.img = `img/${el.product_name}.jpeg`
-          console.log(el.img);
           this.goods.push(el);
         }
       });
